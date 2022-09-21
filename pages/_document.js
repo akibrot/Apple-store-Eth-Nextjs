@@ -18,7 +18,6 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&family=Roboto+Condensed:wght@300&display=swap"
           rel="stylesheet"
         />
-        <title>Full stack E-commerse Web App</title>
       </Head>
       <body>
         <Main />
