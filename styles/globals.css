@@ -1,0 +1,26 @@
+html,
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: Roboto Condensed;
+
+}
+::-webkit-scrollbar{
+  width: 0px;
+}
+.backgroundimage{
+  background-image: url('../public/assets/backgroundpic.jpg')
+}
+.backgroundimage2{
+  background-image: url('https://cdn.shopify.com/s/files/1/0254/9822/2645/articles/Light-Medium-Dark-Roast-Beans-2500_2500x.jpg?v=1620192727');
+}
+.missonvisonbackground{
+  background-image: url("https://c1.wallpaperflare.com/preview/495/9/146/coffee-coffee-tree-fruit-plantation.jpg");
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
