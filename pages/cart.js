@@ -3,7 +3,7 @@ import { useSelector } from "react-redux"
 import Cartitems from "../components/Cartitems"
 import React from 'react'
 
-function cart() {
+function Cart() {
   const state = useSelector((state) => state.cart)
 
   return (
@@ -62,4 +62,4 @@ function cart() {
   )
 }
 
-export default cart
+export default Cart
