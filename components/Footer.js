@@ -6,7 +6,7 @@ import FooterLinksDemoData from './Footer/LinksData'
 function Footer() {
 
     return (
-        <div className="bg-[#590000] flex flex-row flex-wrap gap-2 w-screen text-xl  justify-between pt-16 text-white">
+        <div className="bg-[#590000] flex flex-row flex-wrap gap-2 w-screen text-xl mt-10 justify-between pt-16 text-white">
             <div className="flex flex-col flex-[2.1] md:pl-20 pl-16" >
                 <div className="text-white text-4xl flex ">
                     <p className="font-bold ">E</p>

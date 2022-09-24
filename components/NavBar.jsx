@@ -1,25 +1,45 @@
+import Image from "next/image";
 import Link from "next/link";
+import { FaSearch } from "react-icons/fa";
+import { HiOutlineShoppingBag } from 'react-icons/hi'
+import { IoPersonOutline } from 'react-icons/io5'
+import { useSelector } from "react-redux";
 
+import logo from '../public/images/logo.webp'
 function NavBar() {
+  const state = useSelector((state)=>state.cart)
   return (
-    <div className="w-screen h-20 shadow-xl fixed z-[9999px] top-0 left-0 bg-white ">
-      {/* normal wide screen */}
-      <div className="flex w-full h-full items-center justify-center">
-        <div className="logo flex-[3] flex items-center justify-center">logo</div>
-        <div className="input flex-[3] items-center justify-center flex">
-          <div className="w-3/4 bg-red-500 rounded">
-            <input type="text" name="" id="" placeholder="search product" className="h-9 w-full outline-0 bg-transparent ml-2 placeholder:text-sm placeholder:text-gray-50 text-sm text-black" />
-          </div>
-        </div>
-        <div className="items flex gap-8 flex-[3]">
-          <ul><Link href={""}>Home</Link></ul>
-          <ul><Link href={""}>Cart</Link></ul>
-          <ul><Link href={""}>About</Link></ul>
-          <ul><Link href={""}>Login</Link></ul>
-          {/* <ul><Link href={""}>Sign up</Link></ul> */}
-        </div>
+    <div className="w-screen h-16   fixed z-10 top-0 left-0 bg-[#e7ecee] pl-32 flex items-center">
+      <div > <Link href={"/"}><Image src={logo} width={19} height={20} color="#e7ecee" className="cursor-pointer transition duration-200 opacity-60 hover:opacity-100" /></Link></div>
+      <div className="center flex gap-7 pl-[29%] text-[15px] ">
+        <ul className="opacity-60 hover:opacity-90 duration-200">
+          <Link href={""}>Product</Link>
+        </ul>
+        <ul className="opacity-60 hover:opacity-90 duration-200">
+          <Link href={""}>Explore</Link>
+        </ul>
+        <ul className="opacity-60 hover:opacity-90 duration-200">
+          <Link href={""}>Support</Link>
+
+        </ul>
+        <ul className="opacity-60 hover:opacity-90 duration-200">
+          <Link href={""}>Business</Link>
+
+        </ul>
+
       </div>
-      {/* mobile menu */}
+      <div className="end flex gap-2 items-center pl-[22%]">
+        <div className="cursor-pointer opacity-75 duration-200 hover:opacity-90"><FaSearch size={19}/></div>
+        <div className="relative cursor-pointer opacity-75 duration-200 hover:opacity-90"><Link href={"/cart"}><HiOutlineShoppingBag size={23} /></Link>
+
+          <div className={state.length==0?"hidden":" flex items-center justify-center absolute top-[-6px] right-[-5px] bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full w-4 h-4 "}>
+            <p className="text-white text-sm">{state.length}</p>
+          </div>
+
+        </div>
+        <div className="cursor-pointer opacity-88 duration-200 hover:opacity-100"><Link href={"/signup"}><IoPersonOutline size={20} /></Link></div>
+
+      </div>
     </div>
   );
 }
