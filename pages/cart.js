@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { useSelector } from "react-redux"
 import Cartitems from "../components/Cartitems"
-
+import React from 'react'
 
 function cart() {
   const state = useSelector((state) => state.cart)
