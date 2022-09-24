@@ -1,7 +1,7 @@
 import { GoogleMap, Marker, useLoadScript } from '@react-google-maps/api'
 import React, { useEffect, useState } from 'react'
 
-function map() {
+function Map() {
     const { isLoaded } = useLoadScript({
         googleMapsApiKey: "AIzaSyC7GcL0xpVT9__afqBZVVEgsrFEnrmf-8g"
       })
@@ -30,4 +30,4 @@ function map() {
   )
 }
 
-export default map
+export default Map
