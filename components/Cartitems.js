@@ -13,7 +13,7 @@ function Cartitems({ data }) {
   return (
     <div className=" border-b-[1px] border-gray-300 w-full h-[12rem] flex items-center">
       <div className="pl-10 flex-[2] flex justify-center  ">
-        <Image src={data.image} width={150} height={138} />
+        <Image src={data.image} width={150} height={138} alt=""/>
       </div>
       <div className="pl-16 h-[70%] flex-[4] ">
         <p className="text-xl font-bold">{data.name}</p>

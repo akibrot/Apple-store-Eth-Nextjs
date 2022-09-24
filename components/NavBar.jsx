@@ -10,7 +10,7 @@ function NavBar() {
   const state = useSelector((state)=>state.cart)
   return (
     <div className="w-screen h-16   fixed z-10 top-0 left-0 bg-[#e7ecee] pl-32 flex items-center">
-      <div > <Link href={"/"}><Image src={logo} width={19} height={20} color="#e7ecee" className="cursor-pointer transition duration-200 opacity-60 hover:opacity-100" /></Link></div>
+      <div > <Link href={"/"}><Image src={logo} width={19} height={20} color="#e7ecee" className="cursor-pointer transition duration-200 opacity-60 hover:opacity-100"  alt=""/></Link></div>
       <div className="center flex gap-7 pl-[29%] text-[15px] ">
         <ul className="opacity-60 hover:opacity-90 duration-200">
           <Link href={""}>Product</Link>

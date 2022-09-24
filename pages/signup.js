@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { GoogleMap, Marker, useJsApiLoader, useLoadScript } from '@react-google-maps/api';
-function signup() {
+function Signup() {
   const [MyLocation, setMyLocation] = useState({ lat: "", long: "" })
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((pos) => {
@@ -45,4 +45,4 @@ function signup() {
   )
 }
 
-export default signup
+export default Signup
