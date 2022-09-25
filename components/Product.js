@@ -8,26 +8,31 @@ function Product({ data }) {
   const addtocarthandler = (e) => {
     console.log(e);
     dispatch(addtocart(data));
+    //270h 340w
   };
   return (
-    <div className="bg-[#35383c] w-[25rem] h-[30rem] rounded-xl flex flex-col">
+    <div className="bg-[#35383c] sm:w-[25rem] sm:h-[30rem] w-[10rem] h-[12rem] rounded-xl flex flex-col">
       <div className="flex-[7] flex items-center justify-center">
-        <Image src={data.image} width={340} height={270} />
+        <div className="sm:w-[340px] w-[100px] ">
+        <Image src={data.image}  layout="responsive" />
+
+        </div>
       </div>
-      <div className="flex-[3]  flex items-center text-white font-bold">
-        <div className="flex flex-col px-8 gap-3 pb-5 text-2xl flex-[6]">
+      <div className="flex-[3]  flex sm:items-center text-white font-bold ">
+        <div className="flex flex-col pl-3 sm:px-8 gap-3 pb-5 sm:text-2xl flex-[6] text-[10px] ">
           <p>{data.name}</p>
           <p>${data.price}</p>
         </div>
-        <div className="flex-[5] flex justify-center items-center  h-full ">
+        <div className="sm:flex-[5] flex-[2] pr-3 sm:pr-0 flex justify-center items-center  h-full ">
           <div
             className="bg-gradient-to-r from-pink-400 to-pink-700 rounded-full"
             onClick={() => addtocarthandler(data)}
           >
             <FaShoppingCart
-              size={40}
+              
+
               title="add to cart"
-              className="m-7  cursor-pointer"
+              className="sm:m-7 m-2 cursor-pointer sm:text-[40px] text-[20px]"
             />
           </div>
         </div>

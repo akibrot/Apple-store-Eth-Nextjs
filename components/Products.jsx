@@ -43,10 +43,10 @@ useEffect(()=>{
     return (
         <div className=" w-screen  sticky  bg-[#1b1b1b] flex flex-col items-center z-20">
 
-            <h1 className="text-white py-16 text-5xl font-bold">
+            <h1 className="text-white py-16 text-3xl sm:text-5xl font-bold">
                 New Promos
             </h1>
-            <div className="menu flex border-b-[2px] border-gray-400/70 opacity-60">
+            <div className="menu flex border-b-[2px] border-gray-400/70 opacity-60 px-5 sm:px-0">
                 {
                     category.map((name) => {
                         return <ListItems key={name} name={name} selected={selected} setselecedhabdler={setselecedhabdler} />
@@ -62,11 +62,11 @@ useEffect(()=>{
                         return <Product key={data.id} data={data}></Product>
                     })
                 }
-                <div className={state.length==0?"hidden ":"fixed right-16 bottom-0 mb-10"}>
-                    <div className="bg-gradient-to-r from-pink-300 to-pink-500 p-5 rounded-full flex items-center justify-center relative cursor-pointer">
-                        <Link href={"/cart"}><GiShoppingCart size={60} color="white"/></Link>
-                    <div className="absolute top-4 right-5">
-                        <p className="text-2xl font-extrabold">{state.length}</p>
+                <div className={state.length==0?"hidden ":"fixed right-0 sm:right-16 bottom-0 sm:mb-10 mb-3 mr-3 sm:mr-0"}>
+                    <div className="bg-gradient-to-r from-pink-300 to-pink-500  sm:p-5 p-4 rounded-full flex items-center justify-center relative cursor-pointer">
+                        <Link href={"/cart"}><GiShoppingCart  className="text-[40px] sm:text-[60px]" color="white"/></Link>
+                    <div className="absolute sm:top-4 top-[6px]  sm:right-5 right-3">
+                        <p className="sm:text-2xl text-xl font-extrabold">{state.length}</p>
                     </div>
                     </div>
                 </div>

@@ -7,7 +7,7 @@ function Cart() {
   const state = useSelector((state) => state.cart)
 
   return (
-    <div className="bg-[#e7ecee] w-screen relative pt-16 flex flex-col px-[10rem] ">
+    <div className="bg-[#e7ecee] w-screen relative pt-16 flex flex-col sm:px-[10rem] pl-2">
       <h1 className="text-4xl mt-10 opacity-90 font-bold">Review your bag.</h1>
       <h1 className="pl-1 pt-4 mb-8">Free delivery and free returns. </h1>
       <div className={state.length == 0 ? "block" : "hidden"}>
